@@ -24,6 +24,7 @@ namespace HansonFoods.Models
         [EmailAddress]
         public string Email { get; set; }
 
+        [Required]
         public RatingEnum Rating { get; set; }
     }
 }

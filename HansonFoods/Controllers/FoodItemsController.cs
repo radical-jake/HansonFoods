@@ -35,7 +35,9 @@ namespace HansonFoods.Controllers
 
         public ActionResult New()
         {
-            return View("FoodForm");
+            var foodItem = new FoodItem();
+            
+            return View("FoodForm", foodItem);
         }
 
         public ActionResult Edit(int id)
