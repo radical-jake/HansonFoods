@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201610050234469_ChangingToEnumForRating.Designer.cs">
       <DependentUpon>201610050234469_ChangingToEnumForRating.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610050445313_WhatAmIMissing.cs" />
+    <Compile Include="Migrations\201610050445313_WhatAmIMissing.Designer.cs">
+      <DependentUpon>201610050445313_WhatAmIMissing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\FoodItem.cs" />
@@ -317,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610050234469_ChangingToEnumForRating.resx">
       <DependentUpon>201610050234469_ChangingToEnumForRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610050445313_WhatAmIMissing.resx">
+      <DependentUpon>201610050445313_WhatAmIMissing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

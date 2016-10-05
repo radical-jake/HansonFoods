@@ -8,15 +8,17 @@
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Food Item</th>
+            <th>Name</th>
+            <th>Rating</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var foodItem in Model)
         {
             <tr>
-                <td> @Html.ActionLink(foodItem.Name, "Edit", "FoodItems", new { id = foodItem.Id }, null) </td>
-                </tr>
+                <td>@Html.ActionLink(foodItem.Name, "Edit", "FoodItems", new { id = foodItem.Id }, null)</td>
+                <td>@foodItem.Rating</td>
+            </tr>
         }
     </tbody>
 </table>

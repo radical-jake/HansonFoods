@@ -53,6 +53,11 @@ namespace HansonFoods.Controllers
         [HttpPost]
         public ActionResult Save(FoodItem foodItem)
         {
+            //Form Validation
+            if (!ModelState.IsValid)
+            {
+                return View("FoodForm",foodItem);
+            }
             // New Customer
             if (foodItem.Id == 0)
             {
