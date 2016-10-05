@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search</h2>
+
+@using (@Html.BeginForm("Index", "FoodItems"))
+{
+    <div class="form-group">
+        <label for="searchIdBox">Id: </label>
+        <input id="searchIdBox" type="text" name="searchId" value="0"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Search</button>
+}

@@ -303,6 +303,7 @@
     <Content Include="Views\Shared\_NavBarPartial.cshtml" />
     <Content Include="Views\FoodItems\Details.cshtml" />
     <Content Include="Views\FoodItems\FoodForm.cshtml" />
+    <Content Include="Views\FoodItems\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

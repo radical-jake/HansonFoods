@@ -17,9 +17,15 @@ namespace HansonFoods.Controllers
             _context = new ApplicationDbContext();
         }
 
-        public ActionResult Index()
+        public ActionResult Index(int searchId)
         {
             var foodItems = GetFoodItems();
+
+            if (searchId != 0)
+            {
+                foodItems = foodItems.Where(f => f.Id.Equals(searchId));
+            }
+
             return View(foodItems);
         }
 
@@ -50,6 +56,11 @@ namespace HansonFoods.Controllers
             }
 
             return View("FoodForm", foodItem);
+        }
+
+        public ActionResult Search()
+        {
+            return View();
         }
 
         [HttpPost]

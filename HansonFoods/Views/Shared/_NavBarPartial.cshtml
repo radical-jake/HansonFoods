@@ -10,8 +10,9 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Food List", "Index", "FoodItems")</li>
+                <li>@Html.ActionLink("Food List", "Index", "FoodItems", new {searchId=0}, null)</li>
                 <li>@Html.ActionLink("Add Food", "New", "FoodItems")</li>
+                <li>@Html.ActionLink("Search", "Search", "FoodItems")</li>
             </ul>
         </div>
     </div>
