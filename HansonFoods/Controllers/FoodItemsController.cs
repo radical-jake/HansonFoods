@@ -35,15 +35,42 @@ namespace HansonFoods.Controllers
 
         public ActionResult New()
         {
-            return View();
+            return View("FoodForm");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var foodItem = _context.FoodItems.SingleOrDefault(f => f.Id == id);
+
+            if (foodItem == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View("FoodForm", foodItem);
         }
 
         [HttpPost]
-        public ActionResult Create(FoodItem foodItem)
+        public ActionResult Save(FoodItem foodItem)
         {
-            _context.FoodItems.Add(foodItem);
-            _context.SaveChanges();
+            // New Customer
+            if (foodItem.Id == 0)
+            {
+                _context.FoodItems.Add(foodItem);
+            }
+            else//Update Existing
+            {
+                var foodInDb = _context.FoodItems.Single(f => f.Id == foodItem.Id);
 
+                // Doing individually to avoid magic string issues and potential security issues of TryUpdateModel
+                // Could use Mapper and Dto if this were a larger project
+                foodInDb.Name = foodItem.Name;
+                foodInDb.Url = foodItem.Url;
+                foodInDb.Email = foodItem.Email;
+                foodInDb.Rating = foodItem.Rating;
+            }
+
+            _context.SaveChanges();
             return RedirectToAction("Index", "FoodItems");
         }
 

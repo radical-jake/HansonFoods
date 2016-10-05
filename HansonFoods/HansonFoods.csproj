@@ -298,7 +298,7 @@
     <Content Include="Views\FoodItems\Index.cshtml" />
     <Content Include="Views\Shared\_NavBarPartial.cshtml" />
     <Content Include="Views\FoodItems\Details.cshtml" />
-    <Content Include="Views\FoodItems\New.cshtml" />
+    <Content Include="Views\FoodItems\FoodForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

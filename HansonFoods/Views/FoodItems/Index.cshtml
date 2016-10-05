@@ -15,7 +15,7 @@
         @foreach (var foodItem in Model)
         {
             <tr>
-                <td> @Html.ActionLink(foodItem.Name, "Details", "FoodItems", new { id = foodItem.Id }, null) </td>
+                <td> @Html.ActionLink(foodItem.Name, "Edit", "FoodItems", new { id = foodItem.Id }, null) </td>
                 </tr>
         }
     </tbody>
