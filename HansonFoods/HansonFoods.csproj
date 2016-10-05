@@ -213,12 +213,17 @@
     <Compile Include="Controllers\FoodItemsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Enums\RatingEnum.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201610040133490_InitialModel.cs" />
     <Compile Include="Migrations\201610040133490_InitialModel.Designer.cs">
       <DependentUpon>201610040133490_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610050234469_ChangingToEnumForRating.cs" />
+    <Compile Include="Migrations\201610050234469_ChangingToEnumForRating.Designer.cs">
+      <DependentUpon>201610050234469_ChangingToEnumForRating.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -229,6 +234,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-flatly.css" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -292,6 +298,7 @@
     <Content Include="Views\FoodItems\Index.cshtml" />
     <Content Include="Views\Shared\_NavBarPartial.cshtml" />
     <Content Include="Views\FoodItems\Details.cshtml" />
+    <Content Include="Views\FoodItems\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -307,6 +314,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610040133490_InitialModel.resx">
       <DependentUpon>201610040133490_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610050234469_ChangingToEnumForRating.resx">
+      <DependentUpon>201610050234469_ChangingToEnumForRating.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
